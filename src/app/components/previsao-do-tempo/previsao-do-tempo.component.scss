@@ -1,0 +1,56 @@
+.header{
+    height: 90px;
+    background-color: rgb(6, 126, 179);
+    color: #fff;
+    padding: 14px 40px;
+    box-sizing: border-box;
+
+    .titulo-header{
+        font-size: 32px;
+        font-family: 'Oswald', sans-serif;
+        font-weight:700;
+        margin-right: 20px;
+        position: relative;
+        top: 7px;
+        text-transform: uppercase;
+    }
+
+    input{
+        width: 65%;
+        display: inline-block;
+        margin-right: 10px;
+    }
+
+    button{
+        position: relative;
+        top: -3px;
+    }
+}
+
+.fundo-azul{
+    background-image: url('../../../assets/img/fundo-azul.jpg');
+    height: 564px;
+    background-position: 50% 0%;
+    background-position-x: 50%;
+    background-position-y: 0%;
+    color: #fff;
+
+    .globo{
+        margin: 30px 0px 0px 150px;
+    }
+    
+    .slogan{
+        font-size: 32px;
+        font-family: 'Oswald', sans-serif;
+        margin: 30px 0px 0px 150px;
+        overflow-wrap: break-word;
+        width: 382px;
+        text-align: center;
+        vertical-align: middle;
+    }
+
+    .previsao{
+        font-size: 15px;
+        margin: 130px 0px 0px 60px;
+    }
+}

@@ -1,10 +1,36 @@
-<p>previsao-do-tempo works!</p>
+<div class="container-fluid header">
+    <div class="row">
+        <div class="col-sm-12">
+            <form>
+                <div class="form-group">
+                    <span class="titulo-header">Previsão do Tempo</span>
+                    <input type="text" class="form-control" placeholder="Digite um local para previsão">
+                    <button type="button" class="btn btn-primary">Pesquisar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
 
-<ul>
-    <li>{{previsaoDoTempoDados.resumo}}</li>
-    <li>{{previsaoDoTempoDados.temperaturaAtual}}</li>
-    <li>{{previsaoDoTempoDados.chancesDeChover}}</li>
-    <li>{{previsaoDoTempoDados.humidade}}</li>
-    <li>{{previsaoDoTempoDados.localizacao}}</li>
-    <li>{{previsaoDoTempoDados.endereco}}</li>
-</ul>
+<div class="container-fluid fundo-azul">
+    <div class="row">
+        <div class="col-sm-6">
+            <div class="slogan">Previsão do tempo para qualquer lugar do mundo</div>
+            <div class="globo">
+                <img src="assets/img/globo.png" alt="image">
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <div class="previsao">
+                <ul *ngIf="previsaoDoTempoDados">
+                    <li>{{previsaoDoTempoDados.resumo}}</li>
+                    <li>{{previsaoDoTempoDados.temperaturaAtual}}</li>
+                    <li>{{previsaoDoTempoDados.chancesDeChover}}</li>
+                    <li>{{previsaoDoTempoDados.humidade}}</li>
+                    <li>{{previsaoDoTempoDados.localizacao}}</li>
+                    <li>{{previsaoDoTempoDados.endereco}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
