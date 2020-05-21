@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { PrevisaoDoTempoService } from 'src/app/services/previsao-do-tempo.service'
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-previsao-do-tempo',
@@ -13,11 +14,17 @@ export class PrevisaoDoTempoComponent implements OnInit {
   constructor(private previsaoDoTempoService: PrevisaoDoTempoService) { }
 
   ngOnInit() {
-    this.previsaoDoTempoService.getPrevisaoDoTempo()
+  }
+
+  onSubmit(f: NgForm) {
+    const localDigitado = f.value.local
+    console.log(localDigitado)
+    this.previsaoDoTempoService.getPrevisaoDoTempo(localDigitado)
       .subscribe(dados => {
         console.log(dados)
         this.previsaoDoTempoDados = dados
       })
   }
+
 
 }

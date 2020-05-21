@@ -11,7 +11,7 @@ export class PrevisaoDoTempoService {
 
   constructor(private http: HttpClient) { }
 
-  getPrevisaoDoTempo(): Observable<any> {
-    return this.http.request('GET', this.apiUrl + 'previsao?endereco=New')
+  getPrevisaoDoTempo(localDigitado: String): Observable<any> {
+    return this.http.request('GET', this.apiUrl + 'previsao?endereco=' + localDigitado)
   }
 }
